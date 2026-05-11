@@ -1,0 +1,225 @@
+.texto-com-imagem {
+    /* 1. Tamanho grande para a imagem aparecer bem */
+    font-size: 30px;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    text-transform: none;
+
+    /* 2. Adicione a imagem de fundo */
+    background-image: url('./Img/USA\ and\ UK.webp');
+    background-size: cover; /* Ajusta a imagem ao tamanho do texto */
+    background-position: center;
+
+    /* 3. O MÁGICO: Recorta o fundo para o formato do texto */
+    -webkit-background-clip: text;
+    background-clip: text;
+
+    /* 4. Torna o preenchimento do texto transparente */
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+}
+
+/* curso-ingles.css */
+
+:root {
+    --primary: #1a2a6c;
+    --secondary: #ff0000;
+    --text-dark: #333;
+    --white: #fff;
+    --bg-gray: #f4f7f6;
+    --transition: 0.3s ease;
+}
+
+/* Reset e Base */
+* { 
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box; 
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    color: var(--text-dark);
+    background-color: var(--white);
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px; /* Aumentado para caber melhor os 4 em linha */
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header */
+header {
+    background: var(--primary);
+    padding: 20px 0;
+}
+
+nav { 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+}
+
+.logo { 
+    color: var(--white); 
+    font-weight: bold; 
+    font-size: 1.5rem; 
+    text-decoration: none; 
+}
+
+.logo span { color: var(--secondary); }
+
+.btn-back { 
+    color: var(--white); 
+    text-decoration: none; 
+    border: 1px solid var(--white); 
+    padding: 5px 15px; 
+    border-radius: 4px; 
+    transition: var(--transition);
+}
+
+.btn-back:hover {
+    background: var(--white);
+    color: var(--primary);
+}
+
+/* Hero Section */
+.hero-ingles {
+    background: linear-gradient(rgba(26, 42, 108, 0.9), rgba(82, 93, 137, 0.9)), 
+                url('./Img/Londres.webp');
+    background-size: cover;
+    background-position: center;
+    color: var(--white);
+    padding: 100px 0;
+    text-align: center;
+}
+
+/* Metodologia */
+.metodologia { padding: 80px 0; }
+
+.metodologia h2 { 
+    color: var(--primary); 
+    margin-bottom: 30px; 
+    font-size: 2rem; 
+    text-align: center;
+}
+
+.passos-metodo {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.item-metodo {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+}
+
+.item-metodo span {
+    background: var(--secondary);
+    color: #fff;
+    font-weight: bold;
+    padding: 10px;
+    border-radius: 50%;
+    min-width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Seção de Professores - A Fileira */
+.professores { 
+    padding: 60px 0 100px; 
+    background-color: #fff;
+}
+
+.titulo-secao { 
+    color: var(--primary); 
+    text-align: center; 
+    margin-bottom: 50px; 
+    font-size: 2.2rem; 
+}
+
+.grid-professores {
+    display: flex;          /* Força a fileira */
+    flex-direction: row;    /* Um ao lado do outro */
+    justify-content: center;
+    gap: 20px;              /* Espaçamento entre cards */
+    flex-wrap: nowrap;      /* Impede que quebrem linha no PC */
+}
+
+.card-professor {
+    flex: 1;                /* Todos com a mesma largura */
+    background: var(--bg-gray);
+    padding: 30px 15px;
+    border-radius: 12px;
+    text-align: center;
+    border: 1px solid #ddd;
+    transition: var(--transition);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card-professor:hover {
+    border-color: var(--secondary);
+    transform: translateY(-8px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+/* Fotos Redondas */
+.foto-container {
+    width: 140px;           
+    height: 140px;          
+    margin-bottom: 20px;    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;       
+    border-radius: 50%;     
+    background: #e0e0e0;    
+    border: 4px solid var(--white);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.foto-perfil {
+    width: 100%;            
+    height: 100%;           
+    object-fit: cover;      
+    object-position: center; 
+}
+
+.card-professor h3 { 
+    color: var(--primary); 
+    font-size: 1.1rem; 
+    margin-bottom: 8px; 
+}
+
+.card-professor p { 
+    font-size: 0.85rem; 
+    color: #666; 
+    font-weight: 500;
+}
+
+/* Footer */
+footer { 
+    background: #222; 
+    color: #999; 
+    text-align: center; 
+    padding: 40px 0; 
+}
+
+/* Ajuste para Celulares */
+@media (max-width: 900px) {
+    .grid-professores {
+        flex-wrap: wrap; /* No celular eles pulam linha para não esmagar */
+    }
+    .card-professor {
+        min-width: 250px;
+    }
+}

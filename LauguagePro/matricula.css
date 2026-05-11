@@ -1,0 +1,97 @@
+/* Container que centraliza tudo na tela */
+.matricula-container {
+    display: flex;
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center;     /* Centraliza verticalmente */
+    min-height: 90vh;        /* Ocupa quase a tela toda */
+    background-color: #f0f2f5; /* Fundo cinza claro para destacar o card */
+}
+
+/* O Card Branco */
+.form-matricula {
+    background: #ffffff;
+    width: 100%;
+    max-width: 400px;        /* Largura máxima do formulário */
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1); /* Sombra suave */
+    border-top: 6px solid #1a2a6c; /* Detalhe azul da LanguagePro */
+    text-align: center;
+}
+
+.form-matricula h2 {
+    color: #1a2a6c;
+    margin-bottom: 10px;
+}
+
+.form-matricula p {
+    color: #666;
+    margin-bottom: 30px;
+    font-size: 0.9rem;
+}
+
+/* Alinhamento dos inputs */
+.form-group {
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: bold;
+    color: #1a2a6c;
+    margin-bottom: 8px;
+    font-size: 0.85rem;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 1rem;
+    box-sizing: border-box; /* Garante que o padding não aumente a largura */
+}
+
+/* O Botão Laranja */
+.btn-enviar {
+    width: 100%;
+    background-color: #f39c12;
+    color: white;
+    padding: 14px;
+    border: none;
+    border-radius: 6px;
+    font-weight: bold;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-enviar:hover {
+    background-color: #e67e22;
+}
+
+.forgot-pass {
+    display: block;
+    margin-top: 20px;
+    color: #1a2a6c;
+    text-decoration: none;
+    font-size: 0.8rem;
+}
+/* No seu arquivo de estilo global */
+.logo { 
+    color: var(--white); 
+    font-weight: bold; 
+    font-size: 1.5rem; 
+    text-decoration: none; 
+    font-family: 'Montserrat', sans-serif;
+}
+
+.logo span { 
+    color: var(--secondary); /* O "Pro" em laranja */
+}
+
+/* Ajuste de margem no botão para não ficar colado no fundo do card sem o link */
+.btn-enviar {
+    margin-bottom: 10px;
+}

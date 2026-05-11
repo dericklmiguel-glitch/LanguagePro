@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acesso Aluno | LanguagePro</title>
+    <link rel="stylesheet" href="matricula.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <div class="logo">Language<span>Pro</span></div>
+            <a href="index.html" class="btn-back" style="color:white; text-decoration:none;">← Voltar ao Início</a>
+        </nav>
+    </header>
+
+    <div class="matricula-container">
+        <div class="form-matricula">
+            <h2>Área do Aluno</h2>
+            <p>Acesse sua plataforma ou crie sua conta.</p>
+            
+            <form id="login-form">
+                <div class="form-group">
+                    <label for="email">E-mail Corporativo</label>
+                    <input type="email" id="email" placeholder="exemplo@email.com" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="password">Senha</label>
+                    <input type="password" id="password" placeholder="Sua senha" minlength="6" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="confirm-password">Confirmar Senha</label>
+                    <input type="password" id="confirm-password" placeholder="Repita a senha" required>
+                </div>
+    <a href="index.html" class="btn-enviar" style="display: block; text-decoration: none; text-align: center;">
+        Acessar Plataforma
+    </a>
+</form>
+
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        const form = document.getElementById('login-form');
+        form.addEventListener('submit', (e) => {
+            const pass = document.getElementById('password').value;
+            const confirm = document.getElementById('confirm-password').value;
+
+            if (pass !== confirm) {
+                e.preventDefault();
+                alert('As senhas não coincidem! Tente novamente.');
+            } else {
+                alert('Acesso autorizado! Bem-vindo à LanguagePro.');
+            }
+        });
+    </script>
+</body>
+</html>

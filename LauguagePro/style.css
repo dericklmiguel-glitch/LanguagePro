@@ -1,0 +1,218 @@
+/* style.css - Página Principal */
+:root {
+    --primary: #1a2a6c;
+    --secondary: #f39c12;
+    --text-dark: #333;
+    --white: #fff;
+    --bg-gray: #f4f7f6;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    color: var(--text-dark);
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+    width: 100%;
+}
+
+/* HEADER */
+header {
+    background: var(--primary);
+    padding: 20px 0;
+    width: 100%;
+}
+
+nav { 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+}
+
+.logo { color: var(--white); font-weight: bold; font-size: 1.5rem; text-decoration: none; }
+.logo span { color: var(--secondary); }
+
+nav ul { display: flex; list-style: none; }
+nav ul li { margin-left: 20px; }
+nav ul li a { color: var(--white); text-decoration: none; font-size: 0.9rem; }
+.texto-com-imagem {
+    /* 1. Diminua o valor do font-size (ex: de 100px para 50px) */
+    font-size: 30px; 
+    
+    /* 2. Impede que o texto quebre ou seja cortado por falta de espaço */
+    width: max-content; 
+    display: inline-block;
+    white-space: nowrap;
+
+    /* Mantenha o resto do código do efeito de imagem abaixo */
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    background-image: url('./img/Mapa\ Mundi.jpg');
+    background-size: cover;
+    background-position: center;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+}
+/* HERO - CORREÇÃO DO ALINHAMENTO */
+.hero {
+    background: linear-gradient(rgba(26, 42, 108, 0.8), rgba(26, 42, 108, 0.8)), 
+                url('https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1350&q=80');
+    background-size: cover;
+    background-position: center;
+    height: 80vh; /* Altura da seção */
+    display: flex;
+    align-items: center;      /* Centraliza verticalmente */
+    justify-content: center;   /* Centraliza horizontalmente */
+    text-align: center;
+    color: var(--white);
+}
+
+.hero-content {
+    max-width: 800px; /* Impede que o texto se espalhe demais para os lados */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.hero h1 { 
+    font-size: 3rem; 
+    margin-bottom: 20px; 
+    line-height: 1.2;
+}
+
+.hero p { 
+    font-size: 1.2rem; 
+    margin-bottom: 30px; 
+}
+
+/* BOTÕES */
+.btn-main {
+    background: var(--secondary);
+    color: var(--white);
+    padding: 15px 35px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: 0.3s;
+    display: inline-block;
+}
+
+.btn-main:hover { background: #e67e22; transform: scale(1.05); }
+
+/* SEÇÃO CURSOS */
+#cursos { padding: 80px 0; }
+.section-title { text-align: center; margin-bottom: 50px; font-size: 2rem; color: var(--primary); }
+
+.grid-cursos {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.card {
+    background: var(--bg-gray);
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+    flex: 1;
+    min-width: 280px;
+    max-width: 350px;
+    border-bottom: 5px solid var(--primary);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.btn-card {
+    margin-top: 20px;
+    background: var(--primary);
+    color: white;
+    padding: 12px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn-card:hover { background: var(--secondary); }
+
+/* CONTATO */
+.cta-section { background: var(--primary); color: white; padding: 80px 0; text-align: center; }
+
+#ads-form {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+#ads-form input { padding: 15px; border-radius: 5px; border: none; width: 300px; }
+
+footer { background: #222; color: #999; text-align: center; padding: 40px 0; }
+
+/* --- NOVOS ESTILOS PARA PERFIL E MENU --- */
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    align-items: center;
+    margin-left: auto; /* Empurra o menu para a direita */
+}
+
+.nav-links li {
+    margin-left: 25px;
+}
+
+/* Destaque para o botão de matrícula no menu */
+.btn-matricula-nav {
+    background: var(--secondary);
+    color: white !important;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn-matricula-nav:hover {
+    background: #e67e22;
+}
+
+/* Estilo do Perfil Redondo (Gestalt: Segregação) */
+.user-profile {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 2px solid var(--secondary);
+    margin-left: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.user-profile:hover {
+    transform: scale(1.1);
+}
+
+.user-profile img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* --- FIM DOS NOVOS ESTILOS --- */
