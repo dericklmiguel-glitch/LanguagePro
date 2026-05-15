@@ -53,7 +53,7 @@ nav ul li a { color: var(--white); text-decoration: none; font-size: 0.9rem; }
     /* Mantenha o resto do código do efeito de imagem abaixo */
     font-family: Arial, sans-serif;
     font-weight: bold;
-    background-image: url('./img/Mapa\ Mundi.jpg');
+    background-image: url('./Img/Mapa\ Mundi.png');
     background-size: cover;
     background-position: center;
     -webkit-background-clip: text;
